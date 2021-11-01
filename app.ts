@@ -21,7 +21,8 @@ app.use(express.urlencoded({
 app.get("/",(req,res)=>{
   res.status(201).json({message:"hello from santra drive have a good day"})
 })
+const PORT =process.env.PORT ||5000
 app.use("/api/file",fileRouter)
-app.listen(process.env.PORT,()=>{
-  console.log(`server is listening on port ${process.env.PORT}`)
+app.listen(PORT,()=>{
+  console.log(`server is listening on port ${PORT}`)
 })
